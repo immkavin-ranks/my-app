@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-function MyComponent(props) {
-  return <p>Hello, {props.name}!</p>;
+function MyComponent({name}) {
+  return <p>Hello, {name}!</p>;
 }
 
 
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent name="Kavin"/>
+        <MyComponent name="Kavin" />
       </header>
     </div>
   );
