@@ -1,20 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function MyComponent({name}) {
-  return <p>Hello, {name}!</p>;
-}
-
-
-function App() {
+function Card(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent name={ "Kavin" + 26 } />
-      </header>
-    </div>
+    <section>
+      <h2>{props.icon} Title</h2>
+      {props.children}
+    </section>
   );
 }
 
-export default App;
+function Icon() {
+  return <i>🔥</i>;
+}
+
+export default function App() {
+  return (
+    <Card icon={<Icon />}>
+      <p>The body of the card!</p>
+    </Card>
+  );
+}
